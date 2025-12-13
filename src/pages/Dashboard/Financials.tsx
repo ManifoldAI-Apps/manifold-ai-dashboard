@@ -133,7 +133,7 @@ export default function Financials() {
                                 <TrendingUp className="h-5 w-5" style={{ color: '#10b981' }} />
                             </CardHeader>
                             <CardContent>
-                                <div className="text-3xl font-bold" style={{ color: '#10b981' }}>R$ 328.000</div>
+                                <div className="text-3xl font-bold" style={{ color: '#10b981' }}>R$ 0</div>
                                 <p className="text-xs text-slate-500 mt-1">+15% vs mês anterior</p>
                             </CardContent>
                         </Card>
@@ -145,7 +145,7 @@ export default function Financials() {
                                 <TrendingDown className="h-5 w-5" style={{ color: '#ef4444' }} />
                             </CardHeader>
                             <CardContent>
-                                <div className="text-3xl font-bold" style={{ color: '#ef4444' }}>R$ 193.000</div>
+                                <div className="text-3xl font-bold" style={{ color: '#ef4444' }}>R$ 0</div>
                                 <p className="text-xs text-slate-500 mt-1">+8% vs mês anterior</p>
                             </CardContent>
                         </Card>

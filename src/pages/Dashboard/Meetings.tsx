@@ -8,12 +8,7 @@ import { Calendar, Clock, Users, Video, Plus, MapPin } from 'lucide-react';
 export default function Meetings() {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-    const upcomingMeetings = [
-        { id: 1, title: 'Reunião com TechCorp', date: '2024-06-20', time: '14:00', duration: '1h', attendees: 5, type: 'video', location: 'Google Meet' },
-        { id: 2, title: 'Planejamento Sprint', date: '2024-06-22', time: '10:00', duration: '2h', attendees: 8, type: 'presencial', location: 'Sala de Reuniões' },
-        { id: 3, title: 'Review com Cliente', date: '2024-06-25', time: '15:30', duration: '45min', attendees: 3, type: 'video', location: 'Zoom' },
-        { id: 4, title: 'One-on-One Equipe', date: '2024-06-27', time: '11:00', duration: '30min', attendees: 2, type: 'video', location: 'Google Meet' },
-    ];
+    const upcomingMeetings: any[] = [];
 
     return (
         <div className="space-y-8 animate-fade-in-up">
@@ -49,7 +44,7 @@ export default function Meetings() {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>24</div>
+                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>0</div>
                         <p className="text-xs text-slate-500 mt-1">Este mês</p>
                     </CardContent>
                 </Card>
@@ -63,7 +58,7 @@ export default function Meetings() {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#bd5aff' }}>4</div>
+                        <div className="text-3xl font-bold" style={{ color: '#bd5aff' }}>0</div>
                         <p className="text-xs text-slate-500 mt-1">Próximos 7 dias</p>
                     </CardContent>
                 </Card>
@@ -77,7 +72,7 @@ export default function Meetings() {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#10b981' }}>18</div>
+                        <div className="text-3xl font-bold" style={{ color: '#10b981' }}>0</div>
                         <p className="text-xs text-slate-500 mt-1">Pessoas envolvidas</p>
                     </CardContent>
                 </Card>

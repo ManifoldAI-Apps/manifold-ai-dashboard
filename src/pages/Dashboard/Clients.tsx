@@ -109,7 +109,7 @@ export default function Clients() {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>2.350</div>
+                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>0</div>
                         <p className="text-xs text-slate-500 mt-1">+12% este mês</p>
                     </CardContent>
                 </Card>
@@ -123,7 +123,7 @@ export default function Clients() {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#bd5aff' }}>R$ 469.5K</div>
+                        <div className="text-3xl font-bold" style={{ color: '#bd5aff' }}>R$ 0</div>
                         <p className="text-xs text-slate-500 mt-1">+18% este mês</p>
                     </CardContent>
                 </Card>
@@ -137,7 +137,7 @@ export default function Clients() {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>17</div>
+                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>0</div>
                         <p className="text-xs text-slate-500 mt-1">3 novos esta semana</p>
                     </CardContent>
                 </Card>

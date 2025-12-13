@@ -129,7 +129,7 @@ export default function Goals() {
                         <Target className="h-5 w-5" style={{ color: '#004aad' }} />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>12</div>
+                        <div className="text-3xl font-bold" style={{ color: '#004aad' }}>0</div>
                         <p className="text-xs text-slate-500 mt-1">Este trimestre</p>
                     </CardContent>
                 </Card>
@@ -141,7 +141,7 @@ export default function Goals() {
                         <CheckCircle2 className="h-5 w-5" style={{ color: '#10b981' }} />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-3xl font-bold" style={{ color: '#10b981' }}>7</div>
+                        <div className="text-3xl font-bold" style={{ color: '#10b981' }}>0</div>
                         <p className="text-xs text-slate-500 mt-1">58% do total</p>
                     </CardContent>
                 </Card>

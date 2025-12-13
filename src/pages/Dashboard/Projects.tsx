@@ -28,20 +28,10 @@ export default function Projects() {
     const [formTab, setFormTab] = useState<'visao' | 'cronograma' | 'squad'>('visao');
 
     // Mock data - clientes disponíveis
-    const availableClients = [
-        { id: 1, name: 'TechCorp Solutions' },
-        { id: 2, name: 'Innovation Labs' },
-        { id: 3, name: 'Digital Ventures' },
-        { id: 4, name: 'Smart Systems' },
-    ];
+    const availableClients: { id: number; name: string }[] = [];
 
     // Mock data - equipe disponível
-    const availableTeam = [
-        { id: 1, name: 'Ana Silva', role: 'PM', avatar: 'AS' },
-        { id: 2, name: 'Bruno Costa', role: 'Dev', avatar: 'BC' },
-        { id: 3, name: 'Carla Souza', role: 'Designer', avatar: 'CS' },
-        { id: 4, name: 'Diego Lima', role: 'Dev', avatar: 'DL' },
-    ];
+    const availableTeam: { id: number; name: string; role: string; avatar: string }[] = [];
 
     const projects: Project[] = [];
 

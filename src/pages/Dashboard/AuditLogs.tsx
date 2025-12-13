@@ -19,63 +19,7 @@ export default function AuditLogs() {
     const [filterAction, setFilterAction] = useState('');
     const [filterDate, setFilterDate] = useState('');
 
-    // Mock data
-    const logs: AuditLog[] = [
-        {
-            id: 1,
-            actor: { name: 'Ana Silva', avatar: 'AS', email: 'ana.silva@manifold.ai' },
-            action: 'created',
-            targetType: 'project',
-            targetName: 'Migração para Nuvem',
-            timestamp: '2024-06-15T14:32:00',
-            details: { client: 'TechCorp', budget: 50000, status: 'active' }
-        },
-        {
-            id: 2,
-            actor: { name: 'Bruno Costa', avatar: 'BC', email: 'bruno.costa@manifold.ai' },
-            action: 'updated',
-            targetType: 'task',
-            targetName: 'Treinar modelo de NLP v2',
-            timestamp: '2024-06-15T13:15:00',
-            details: { before: { status: 'todo' }, after: { status: 'wip' } }
-        },
-        {
-            id: 3,
-            actor: { name: 'Ana Silva', avatar: 'AS', email: 'ana.silva@manifold.ai' },
-            action: 'deleted',
-            targetType: 'client',
-            targetName: 'Empresa X',
-            timestamp: '2024-06-15T11:45:00',
-            details: { reason: 'Duplicate entry', deletedBy: 'admin' }
-        },
-        {
-            id: 4,
-            actor: { name: 'Carla Souza', avatar: 'CS', email: 'carla.souza@manifold.ai' },
-            action: 'created',
-            targetType: 'goal',
-            targetName: 'Aumentar MRR em 30%',
-            timestamp: '2024-06-14T16:20:00',
-            details: { category: 'Financeiro', cycle: 'Q3 2024', target: 150000 }
-        },
-        {
-            id: 5,
-            actor: { name: 'Diego Lima', avatar: 'DL', email: 'diego.lima@manifold.ai' },
-            action: 'updated',
-            targetType: 'subscription',
-            targetName: 'Vercel Pro',
-            timestamp: '2024-06-14T10:30:00',
-            details: { before: { cost: 180 }, after: { cost: 200 } }
-        },
-        {
-            id: 6,
-            actor: { name: 'Bruno Costa', avatar: 'BC', email: 'bruno.costa@manifold.ai' },
-            action: 'created',
-            targetType: 'team',
-            targetName: 'Elena Martins',
-            timestamp: '2024-06-13T09:00:00',
-            details: { role: 'Editor', department: 'Vendas', position: 'SDR' }
-        },
-    ];
+    const logs: AuditLog[] = [];
 
     const getActionBadge = (action: string) => {
         const styles: { [key: string]: string } = {
