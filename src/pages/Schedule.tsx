@@ -12,7 +12,7 @@ export default function Schedule() {
                 <div className="container mx-auto px-6 h-20 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         {/* Logo Image & Text with Float Animation */}
-                        <img src="/logo.png" alt="Manifold AI Logo" className="h-10 w-auto animate-float" />
+                        <img src="/logo.png" alt="MANIFOLD AI Logo" className="h-10 w-auto" />
                         <span className="text-2xl md:text-3xl font-bold tracking-tight">
                             <span style={{ color: '#004aad' }}>MANIFOLD</span> <span style={{ color: '#bd5aff' }}>AI</span>
                         </span>
