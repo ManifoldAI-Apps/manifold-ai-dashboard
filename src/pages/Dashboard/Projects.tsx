@@ -43,52 +43,7 @@ export default function Projects() {
         { id: 4, name: 'Diego Lima', role: 'Dev', avatar: 'DL' },
     ];
 
-    const projects = [
-        {
-            id: 1,
-            name: 'Automação de Processos',
-            client: 'TechCorp Solutions',
-            status: 'Em Andamento',
-            priority: 'Alta',
-            deadline: '2024-07-15',
-            budget: 'R$ 125.000',
-            team: 4,
-            progress: 65
-        },
-        {
-            id: 2,
-            name: 'Dashboard Analytics',
-            client: 'Innovation Labs',
-            status: 'Em Planejamento',
-            priority: 'Média',
-            deadline: '2024-08-20',
-            budget: 'R$ 89.500',
-            team: 3,
-            progress: 15
-        },
-        {
-            id: 3,
-            name: 'Integração API',
-            client: 'Digital Ventures',
-            status: 'Concluído',
-            priority: 'Alta',
-            deadline: '2024-06-10',
-            budget: 'R$ 210.000',
-            team: 5,
-            progress: 100
-        },
-        {
-            id: 4,
-            name: 'Consultoria IA',
-            client: 'Smart Systems',
-            status: 'Pausado',
-            priority: 'Baixa',
-            deadline: '2024-09-30',
-            budget: 'R$ 45.000',
-            team: 2,
-            progress: 30
-        },
-    ];
+    const projects: Project[] = [];
 
     const filteredProjects = projects.filter(project =>
         project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||

@@ -27,12 +27,7 @@ export default function Clients() {
     const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
     const [formTab, setFormTab] = useState<'empresa' | 'decisor' | 'estrategia'>('empresa');
 
-    const clients = [
-        { id: 1, name: 'TechCorp Solutions', email: 'contact@techcorp.com', phone: '+55 11 98765-4321', location: 'São Paulo, SP', projects: 5, revenue: 'R$ 125.000', status: 'active', funnel: 'Cliente Ativo' },
-        { id: 2, name: 'Innovation Labs', email: 'hello@innovlabs.com', phone: '+55 21 91234-5678', location: 'Rio de Janeiro, RJ', projects: 3, revenue: 'R$ 89.500', status: 'active', funnel: 'Cliente Ativo' },
-        { id: 3, name: 'Digital Ventures', email: 'info@digitalv.com', phone: '+55 11 99876-5432', location: 'São Paulo, SP', projects: 7, revenue: 'R$ 210.000', status: 'active', funnel: 'Cliente Ativo' },
-        { id: 4, name: 'Smart Systems', email: 'contact@smartsys.com', phone: '+55 47 98765-1234', location: 'Florianópolis, SC', projects: 2, revenue: 'R$ 45.000', status: 'pending', funnel: 'Proposta Enviada' },
-    ];
+    const clients: Client[] = [];
 
     const filteredClients = clients.filter(client =>
         client.name.toLowerCase().includes(searchTerm.toLowerCase()) ||

@@ -31,68 +31,7 @@ export default function Goals() {
     const [formTab, setFormTab] = useState<'estrategia' | 'kpis' | 'ownership'>('estrategia');
     const [metricType, setMetricType] = useState<'currency' | 'percentage' | 'number'>('currency');
 
-    const goals = [
-        {
-            id: 1,
-            title: 'Dominar o mercado de PME no Q3',
-            category: 'Financeiro',
-            cycle: 'Q3 2024',
-            metricType: 'currency',
-            initial: 0,
-            target: 1000000,
-            current: 650000,
-            progress: 65,
-            health: 'on-track',
-            owner: 'Ana Silva',
-            department: 'Vendas',
-            frequency: 'Mensal'
-        },
-        {
-            id: 2,
-            title: 'Aumentar NPS para 80+',
-            category: 'Produto',
-            cycle: 'Q3 2024',
-            metricType: 'number',
-            initial: 45,
-            target: 80,
-            current: 62,
-            progress: 49,
-            health: 'at-risk',
-            owner: 'Bruno Costa',
-            department: 'CS',
-            frequency: 'Trimestral'
-        },
-        {
-            id: 3,
-            title: 'Reduzir Churn em 50%',
-            category: 'Operacional',
-            cycle: 'Q3 2024',
-            metricType: 'percentage',
-            initial: 8,
-            target: 4,
-            current: 5.2,
-            progress: 70,
-            health: 'on-track',
-            owner: 'Carla Souza',
-            department: 'CS',
-            frequency: 'Mensal'
-        },
-        {
-            id: 4,
-            title: 'Contratar 10 novos desenvolvedores',
-            category: 'Pessoas',
-            cycle: 'Q3 2024',
-            metricType: 'number',
-            initial: 0,
-            target: 10,
-            current: 3,
-            progress: 30,
-            health: 'off-track',
-            owner: 'Diego Lima',
-            department: 'Admin',
-            frequency: 'Semanal'
-        },
-    ];
+    const goals: Goal[] = [];
 
     const getHealthBadge = (health: string) => {
         const styles: { [key: string]: string } = {

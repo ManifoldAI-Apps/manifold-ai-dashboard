@@ -51,60 +51,9 @@ export default function Financials() {
         { month: 'Jun', receita: 67000, despesas: 38000 },
     ];
 
-    const transactions = [
-        { id: 1, type: 'income', description: 'Pagamento TechCorp', amount: 12500, date: '2024-06-15', category: 'Vendas', status: 'paid' },
-        { id: 2, type: 'expense', description: 'Salários Equipe', amount: 18000, date: '2024-06-10', category: 'Pessoal', status: 'paid' },
-        { id: 3, type: 'income', description: 'Consultoria Innovation Labs', amount: 8500, date: '2024-06-08', category: 'Vendas', status: 'paid' },
-        { id: 4, type: 'expense', description: 'Infraestrutura AWS', amount: 2300, date: '2024-06-05', category: 'Infraestrutura', status: 'pending' },
-        { id: 5, type: 'expense', description: 'Impostos Q2', amount: 5400, date: '2024-06-30', category: 'Impostos', status: 'scheduled' },
-    ];
+    const transactions: any[] = [];
 
-    const subscriptions = [
-        {
-            id: 1,
-            service: 'ChatGPT Plus',
-            cost: 20,
-            frequency: 'monthly',
-            renewalDate: '2024-07-05',
-            login: 'admin@manifold.ai',
-            password: 'gpt_secret_123',
-            loginUrl: 'https://chat.openai.com',
-            reminder: true
-        },
-        {
-            id: 2,
-            service: 'Vercel Pro',
-            cost: 200,
-            frequency: 'monthly',
-            renewalDate: '2024-06-28',
-            login: 'deploy@manifold.ai',
-            password: 'vercel_pass_456',
-            loginUrl: 'https://vercel.com/login',
-            reminder: true
-        },
-        {
-            id: 3,
-            service: 'Adobe Creative Cloud',
-            cost: 599,
-            frequency: 'annual',
-            renewalDate: null,
-            login: 'design@manifold.ai',
-            password: 'adobe_key_789',
-            loginUrl: 'https://adobe.com',
-            reminder: false
-        },
-        {
-            id: 4,
-            service: 'GitHub Enterprise',
-            cost: 450,
-            frequency: 'monthly',
-            renewalDate: '2024-07-15',
-            login: 'team@manifold.ai',
-            password: 'github_token_012',
-            loginUrl: 'https://github.com/login',
-            reminder: true
-        },
-    ];
+    const subscriptions: any[] = [];
 
     const togglePassword = (id: number) => {
         setShowPasswords(prev => ({ ...prev, [id]: !prev[id] }));
