@@ -42,14 +42,7 @@ export default function Financials() {
         setSelectedSubscription(null);
     };
 
-    const data = [
-        { month: 'Jan', receita: 45000, despesas: 28000 },
-        { month: 'Fev', receita: 52000, despesas: 31000 },
-        { month: 'Mar', receita: 48000, despesas: 29000 },
-        { month: 'Abr', receita: 61000, despesas: 35000 },
-        { month: 'Mai', receita: 55000, despesas: 32000 },
-        { month: 'Jun', receita: 67000, despesas: 38000 },
-    ];
+    const data: any[] = [];
 
     const transactions: any[] = [];
 

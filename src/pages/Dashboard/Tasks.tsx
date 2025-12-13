@@ -33,112 +33,13 @@ export default function Tasks() {
     const [subtasks, setSubtasks] = useState<string[]>([]);
     const [newSubtask, setNewSubtask] = useState('');
     const [draggedTask, setDraggedTask] = useState<number | null>(null);
-    const [tasks, setTasks] = useState<Task[]>([
-        {
-            id: 1,
-            title: 'Treinar modelo de NLP v2',
-            project: 'Automação de Processos',
-            assignee: 'Bruno Costa',
-            avatar: 'BC',
-            priority: 'urgent',
-            dueDate: '2024-06-20',
-            estimate: 8,
-            status: 'wip',
-            tags: ['AI', 'Backend'],
-            subtasks: 3,
-            completed: 1,
-            subtaskList: [
-                { id: 1, title: 'Coletar dataset de treinamento', completed: true },
-                { id: 2, title: 'Configurar pipeline de treino', completed: false },
-                { id: 3, title: 'Validar acurácia do modelo', completed: false }
-            ]
-        },
-        {
-            id: 2,
-            title: 'Implementar autenticação OAuth',
-            project: 'Dashboard Analytics',
-            assignee: 'Ana Silva',
-            avatar: 'AS',
-            priority: 'high',
-            dueDate: '2024-06-25',
-            estimate: 6,
-            status: 'todo',
-            tags: ['Feature', 'Security'],
-            subtasks: 4,
-            completed: 0
-        },
-        {
-            id: 3,
-            title: 'Corrigir bug no upload de arquivos',
-            project: 'Integração API',
-            assignee: 'Carla Souza',
-            avatar: 'CS',
-            priority: 'urgent',
-            dueDate: '2024-06-18',
-            estimate: 2,
-            status: 'review',
-            tags: ['Bug', 'Frontend'],
-            subtasks: 2,
-            completed: 2
-        },
-        {
-            id: 4,
-            title: 'Documentar API endpoints',
-            project: null,
-            assignee: 'Diego Lima',
-            avatar: 'DL',
-            priority: 'normal',
-            dueDate: '2024-07-01',
-            estimate: 4,
-            status: 'backlog',
-            tags: ['Docs'],
-            subtasks: 5,
-            completed: 0
-        },
-        {
-            id: 5,
-            title: 'Otimizar queries do banco',
-            project: 'Dashboard Analytics',
-            assignee: 'Bruno Costa',
-            avatar: 'BC',
-            priority: 'high',
-            dueDate: '2024-06-22',
-            estimate: 5,
-            status: 'wip',
-            tags: ['Performance', 'Backend'],
-            subtasks: 3,
-            completed: 2
-        },
-        {
-            id: 6,
-            title: 'Configurar CI/CD pipeline',
-            project: null,
-            assignee: 'Ana Silva',
-            avatar: 'AS',
-            priority: 'low',
-            dueDate: '2024-07-10',
-            estimate: 6,
-            status: 'todo',
-            tags: ['Infra', 'DevOps'],
-            subtasks: 6,
-            completed: 0
-        },
-    ]);
+    const [tasks, setTasks] = useState<Task[]>([]);
 
     // Mock data - projetos disponíveis
-    const availableProjects = [
-        { id: 1, name: 'Automação de Processos' },
-        { id: 2, name: 'Dashboard Analytics' },
-        { id: 3, name: 'Integração API' },
-    ];
+    const availableProjects: { id: number; name: string }[] = [];
 
     // Mock data - equipe disponível
-    const availableTeam = [
-        { id: 1, name: 'Ana Silva', avatar: 'AS' },
-        { id: 2, name: 'Bruno Costa', avatar: 'BC' },
-        { id: 3, name: 'Carla Souza', avatar: 'CS' },
-        { id: 4, name: 'Diego Lima', avatar: 'DL' },
-    ];
+    const availableTeam: { id: number; name: string; avatar: string }[] = [];
 
     const columns = [
         { id: 'backlog', title: 'Backlog', color: '#64748b' },
@@ -724,8 +625,8 @@ export default function Tasks() {
                                             )}
                                         </button>
                                         <span className={`text-sm ${subtask.completed
-                                                ? 'text-slate-400 line-through'
-                                                : 'text-slate-900'
+                                            ? 'text-slate-400 line-through'
+                                            : 'text-slate-900'
                                             }`}>
                                             {subtask.title}
                                         </span>

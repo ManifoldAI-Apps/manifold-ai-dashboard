@@ -4,47 +4,29 @@ import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, 
 
 export default function Overview() {
     // Mock data - Financial KPIs
-    const mrr = 125000;
-    const mrrGrowth = 12;
-    const netProfit = 45000;
-    const runway = 4.5;
-    const pipelineValue = 50000;
+    const mrr = 0;
+    const mrrGrowth = 0;
+    const netProfit = 0;
+    const runway = 0;
+    const pipelineValue = 0;
 
     // Mock data - Project Health
-    const projectHealth = [
-        { name: 'No Prazo', value: 3, color: '#10b981' },
-        { name: 'Em Risco', value: 1, color: '#f59e0b' },
-        { name: 'Atrasado', value: 1, color: '#ef4444' },
-    ];
+    const projectHealth: any[] = [];
 
     // Mock data - OKR
-    const okrProgress = 78;
-    const okrGoal = 1000000;
-    const okrCurrent = 780000;
-    const okrRemaining = okrGoal - okrCurrent;
+    const okrProgress = 0;
+    const okrGoal = 0;
+    const okrCurrent = 0;
+    const okrRemaining = 0;
 
     // Mock data - Subscription Alerts
-    const expiringSubscriptions = [
-        { name: 'Vercel Pro', daysLeft: 1, cost: 200 },
-        { name: 'GitHub Enterprise', daysLeft: 3, cost: 450 },
-        { name: 'Figma Professional', daysLeft: 7, cost: 144 },
-    ];
+    const expiringSubscriptions: any[] = [];
 
     // Mock data - Priority Tasks
-    const myTasks = [
-        { id: 1, title: 'Treinar modelo de NLP v2', priority: 'urgent', project: 'Automação' },
-        { id: 2, title: 'Corrigir bug no upload', priority: 'urgent', project: 'API' },
-        { id: 3, title: 'Implementar OAuth', priority: 'high', project: 'Dashboard' },
-        { id: 4, title: 'Documentar endpoints', priority: 'normal', project: 'Geral' },
-    ];
+    const myTasks: any[] = [];
 
     // Mock data - Team Capacity
-    const teamLoad = [
-        { name: 'João', tasks: 5, urgent: 3 },
-        { name: 'Ana', tasks: 4, urgent: 1 },
-        { name: 'Carlos', tasks: 3, urgent: 0 },
-        { name: 'Maria', tasks: 1, urgent: 0 },
-    ];
+    const teamLoad: any[] = [];
 
     const getPriorityColor = (priority: string) => {
         const colors: { [key: string]: string } = {

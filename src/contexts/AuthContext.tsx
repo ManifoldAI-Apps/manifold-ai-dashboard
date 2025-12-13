@@ -31,16 +31,30 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        // Set a maximum loading time
+        const loadingTimeout = setTimeout(() => {
+            console.warn('Auth loading timeout - setting loading to false');
+            setLoading(false);
+        }, 3000);
+
         // Get initial session
-        supabase.auth.getSession().then(({ data: { session } }) => {
-            setSession(session);
-            setUser(session?.user ?? null);
-            if (session?.user) {
-                fetchProfile(session.user.id);
-            } else {
+        supabase.auth.getSession()
+            .then(({ data: { session } }) => {
+                setSession(session);
+                setUser(session?.user ?? null);
+                if (session?.user) {
+                    fetchProfile(session.user.id);
+                } else {
+                    setLoading(false);
+                }
+            })
+            .catch((error) => {
+                console.error('Error getting session:', error);
                 setLoading(false);
-            }
-        });
+            })
+            .finally(() => {
+                clearTimeout(loadingTimeout);
+            });
 
         // Listen for auth changes
         const { data: { subscription } } = supabase.auth.onAuthStateChange(
@@ -56,7 +70,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             }
         );
 
-        return () => subscription.unsubscribe();
+        return () => {
+            subscription.unsubscribe();
+            clearTimeout(loadingTimeout);
+        };
     }, []);
 
     const fetchProfile = async (userId: string) => {
@@ -67,7 +84,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                 .eq('id', userId)
                 .single();
 
-            if (error) throw error;
+            if (error) {
+                console.error('Error fetching profile:', error);
+                setLoading(false);
+                return;
+            }
+
             setProfile(data);
         } catch (error) {
             console.error('Error fetching profile:', error);

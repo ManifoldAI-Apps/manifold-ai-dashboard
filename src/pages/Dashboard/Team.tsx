@@ -28,78 +28,7 @@ export default function Team() {
     const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
     const [isDetailOpen, setIsDetailOpen] = useState(false);
     const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
-    const [members, setMembers] = useState<TeamMember[]>([
-        {
-            id: 1,
-            name: 'Ana Silva',
-            email: 'ana.silva@manifold.ai',
-            role: 'Admin',
-            department: 'Diretoria',
-            position: 'CEO',
-            avatar: 'AS',
-            status: 'active',
-            skills: ['Gestão', 'Estratégia', 'Vendas'],
-            hourlyRate: 250,
-            startDate: '2023-01-15',
-            projectsCount: 12
-        },
-        {
-            id: 2,
-            name: 'Bruno Costa',
-            email: 'bruno.costa@manifold.ai',
-            role: 'Manager',
-            department: 'Engenharia',
-            position: 'Tech Lead',
-            avatar: 'BC',
-            status: 'active',
-            skills: ['Python', 'React', 'AI/ML'],
-            hourlyRate: 180,
-            startDate: '2023-03-20',
-            projectsCount: 8
-        },
-        {
-            id: 3,
-            name: 'Carla Souza',
-            email: 'carla.souza@manifold.ai',
-            role: 'Editor',
-            department: 'Design',
-            position: 'UX Designer',
-            avatar: 'CS',
-            status: 'active',
-            skills: ['Figma', 'UI/UX', 'Branding'],
-            hourlyRate: 120,
-            startDate: '2023-06-10',
-            projectsCount: 6
-        },
-        {
-            id: 4,
-            name: 'Diego Lima',
-            email: 'diego.lima@manifold.ai',
-            role: 'Viewer',
-            department: 'Customer Success',
-            position: 'CS Manager',
-            avatar: 'DL',
-            status: 'active',
-            skills: ['Negociação', 'Suporte', 'CRM'],
-            hourlyRate: 100,
-            startDate: '2023-08-05',
-            projectsCount: 4
-        },
-        {
-            id: 5,
-            name: 'Elena Martins',
-            email: 'elena.martins@manifold.ai',
-            role: 'Editor',
-            department: 'Vendas',
-            position: 'SDR',
-            avatar: 'EM',
-            status: 'pending',
-            skills: ['Prospecção', 'LinkedIn'],
-            hourlyRate: 80,
-            startDate: '2024-01-10',
-            projectsCount: 0
-        },
-    ]);
+    const [members, setMembers] = useState<TeamMember[]>([]);
 
     const handleCardClick = (member: TeamMember) => {
         setSelectedMember(member);
