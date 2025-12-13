@@ -130,7 +130,7 @@ export default function Team() {
             'Editor': 'bg-green-100 text-green-700',
             'Viewer': 'bg-slate-100 text-slate-700'
         };
-        const icons: { [key: string]: JSX.Element } = {
+        const icons: Record<string, React.ReactElement> = {
             'Admin': <Crown className="h-3 w-3" />,
             'Manager': <Shield className="h-3 w-3" />,
             'Editor': <Edit className="h-3 w-3" />,
@@ -150,7 +150,7 @@ export default function Team() {
             'suspended': 'bg-red-100 text-red-700',
             'pending': 'bg-yellow-100 text-yellow-700'
         };
-        const icons: { [key: string]: JSX.Element } = {
+        const icons: Record<string, React.ReactElement> = {
             'active': <UserCheck className="h-3 w-3" />,
             'suspended': <UserX className="h-3 w-3" />,
             'pending': <Clock className="h-3 w-3" />
