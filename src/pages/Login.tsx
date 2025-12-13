@@ -36,22 +36,12 @@ export default function Login() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-6">
-            {/* Background Glows */}
-            <div
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[120px] -z-10 pointer-events-none"
-                style={{ backgroundColor: 'rgba(0, 74, 173, 0.1)' }}
-            />
-            <div
-                className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full blur-[100px] -z-10 pointer-events-none"
-                style={{ backgroundColor: 'rgba(189, 90, 255, 0.1)' }}
-            />
-
+        <div className="min-h-screen bg-white flex items-center justify-center p-6">
             <div className="w-full max-w-md">
                 {/* Logo */}
                 <div className="text-center mb-8">
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <img src="/logo.png" alt="Manifold AI Logo" className="h-12 w-auto" />
+                        <img src="/logo.png" alt="MANIFOLD AI Logo" className="h-12 w-auto" />
                         <span className="text-3xl font-bold tracking-tight">
                             <span style={{ color: '#004aad' }}>MANIFOLD</span>{' '}
                             <span style={{ color: '#bd5aff' }}>AI</span>

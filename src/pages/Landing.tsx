@@ -13,7 +13,7 @@ export default function Landing() {
                 <div className="container mx-auto px-6 h-20 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         {/* Logo Image & Text with Float Animation */}
-                        <img src="/logo.png" alt="Manifold AI Logo" className="h-10 w-auto animate-float" />
+                        <img src="/logo.png" alt="MANIFOLD AI Logo" className="h-10 w-auto" />
                         <span className="text-2xl md:text-3xl font-bold tracking-tight">
                             <span style={{ color: '#004aad' }}>MANIFOLD</span> <span style={{ color: '#bd5aff' }}>AI</span>
                         </span>
@@ -179,13 +179,13 @@ export default function Landing() {
             <footer className="py-8 border-t border-slate-200 bg-white text-slate-500 text-sm">
                 <div className="container mx-auto px-6 flex justify-center text-center">
                     <div>
-                        © 2025 Manifold AI. All rights reserved.
+                        © 2025 MANIFOLD AI. All rights reserved.
                     </div>
                 </div>
             </footer>
 
             {/* Floating Chat Widget */}
-            <div className="fixed bottom-6 right-6 z-50 animate-float">
+            <div className="fixed bottom-6 right-6 z-50">
                 <Button
                     className="h-14 w-14 rounded-full text-white shadow-lg p-0 flex items-center justify-center transition-transform hover:scale-110 duration-300"
                     style={{
