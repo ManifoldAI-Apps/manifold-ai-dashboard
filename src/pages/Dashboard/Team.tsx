@@ -154,10 +154,9 @@ export default function Team() {
                 if (error) throw error;
                 fetchData();
             } else {
-                // Invite (Mock)
-                // In a real app, this would call an Edge Function to inviteUserByEmail
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                alert('Convite enviado com sucesso! (Simulação - O usuário deve ser criado via Auth)');
+                // Invite - Note: User creation must be done via Supabase Auth Dashboard
+                // This just closes the dialog. To actually invite users, use Supabase Auth panel.
+                console.log('Invite form submitted. Create user via Supabase Auth Dashboard with:', formData);
             }
             setIsDialogOpen(false);
             resetForm();
