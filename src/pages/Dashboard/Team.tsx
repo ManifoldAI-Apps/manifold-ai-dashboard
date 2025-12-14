@@ -244,6 +244,7 @@ export default function Team() {
                     <p className="text-slate-600 text-lg">Gestão de Usuários, Permissões & Alocação</p>
                 </div>
                 <Button
+
                     onClick={() => { resetForm(); setIsDialogOpen(true); }}
                     className="animate-gradient text-white border-none shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                     style={{

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 
 interface DialogProps {
@@ -27,7 +28,7 @@ export function Dialog({ isOpen, onClose, children, title, description }: Dialog
 
     if (!isOpen) return null;
 
-    return (
+    return createPortal(
         <div
             className="fixed inset-0 z-[9999] flex items-center justify-center animate-in fade-in duration-300"
             onClick={onClose}
@@ -53,6 +54,7 @@ export function Dialog({ isOpen, onClose, children, title, description }: Dialog
                     {children}
                 </div>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }
