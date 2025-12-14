@@ -655,6 +655,15 @@ export default function Team() {
                                     onChange={(e) => handleSkillsChange(e.target.value)}
                                 />
                                 <p className="text-xs text-slate-500 mt-1">Útil para alocação em projetos</p>
+                                {formData.skills && formData.skills.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-2">
+                                        {formData.skills.map((skill, idx) => (
+                                            <span key={idx} className="px-2 py-1 text-xs rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1 flex items-center gap-2">
